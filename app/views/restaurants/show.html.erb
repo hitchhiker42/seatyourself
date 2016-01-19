@@ -1,0 +1,17 @@
+<h1>Make a Reservation at <%= @restaurant.name %></h1>
+
+<%= form_for [@restaurant, @reservation] do |f| %>
+<% @reservation.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+
+<%= f.label :party_size %>
+<%= f.text_field :party_size %>
+
+<%= f.label :date_time %>
+<%= f.datetime_select :date_time %>
+
+<%= f.submit "Make yo reservation" %>
+
+<% end %>
+

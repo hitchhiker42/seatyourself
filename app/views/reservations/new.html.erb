@@ -1,0 +1,14 @@
+<h1>Make a Reservation at <%= @restaurants.name %></h1>
+
+
+
+<select name="time">
+ <option value="8">8AM</option>
+ <option value="9">9AM</option>
+ <option value="10">10AM</option>
+</select>
+
+
+
+<%= select_month(Date.today) %>
+<%= select_year(Date.today, :start_year => Date.today.year, :end_year => 3.years.from_now.year) %>
